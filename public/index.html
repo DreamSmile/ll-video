@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <script src="http://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+  <!-- <script type="text/javascript" src="https://cdn.bootcss.com/vConsole/3.3.0/vconsole.min.js"></script> -->
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      max-width: 540px;
+      margin: 0 auto;
+      background-color: #000;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .loading_box {
+      background-color: #fff;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .loading_name {
+      animation: leftMove 1.5s ease 1;
+      font-size: 30px;
+      font-style: italic;
+      text-align: center;
+      /*调用动画：动画名、时间、时间线条、播放次数*/
+      animation-fill-mode: forwards;
+      line-height: 1.426px;
+      /*定义动画结束的状态*/
+    }
+
+    .loading_msg {
+      text-align: center;
+      margin-left: 20px;
+      font-size: 30px;
+      font-style: italic;
+      line-height: 20px;
+      animation: rightMove 2s ease 1;
+      /*调用动画：动画名、时间、时间线条、播放次数*/
+      animation-fill-mode: forwards;
+      /*定义动画结束的状态*/
+    }
+
+    @keyframes leftMove {
+      0% {
+        transform: translateX(-20px);
+        opacity: 0.5;
+      }
+
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes rightMove {
+      0% {
+        transform: translateX(10px);
+        opacity: 0.5;
+      }
+
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+  </noscript>
+  <div id="app">
+    <div id="app">
+      <div class="loading_box">
+        <div class="loading">
+          <p class="loading_name">利郎</p>
+          <br />
+          <p class="loading_msg">欢迎您...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- built files will be auto injected -->
+</body>
+<!-- <script>  var vConsole = new VConsole();
+</script> -->
+
+</html>
